@@ -42,6 +42,8 @@ export class Library{
         if(book.borrowedBy) return "Book is already borrowed !!";
 
         book.borrowedBy = member.id;
+        member.books.push(book);
         return `${member.name} has borrowed "${book.name}"`;
+
     }
 } 
